@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Thinking Journey</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="screen">
+      <video id="bgVideo" class="bg-video" autoplay muted playsinline>
+        <source src="assets/step1.mp4" type="video/mp4" />
+      </video>
+
+      <div class="dark-overlay"></div>
+
+      <section class="left-panel">
+        <p id="stepLabel" class="step-label"></p>
+        <h1 id="title"></h1>
+        <p id="description"></p>
+      </section>
+
+      <button id="nextBtn" class="small-action"></button>
+      <button id="prevBtn" class="small-action prev-action"></button>
+
+      <section class="stage">
+        <div class="step-content" data-step="0">
+          <form id="questionForm" class="input-box">
+            <input
+              id="questionInput"
+              type="text"
+              placeholder="What would you like to understand?"
+            />
+
+            <button type="submit" class="submit-btn">
+              <span class="arrow-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 19V5"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 11L12 5L18 11"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <div class="step-content" data-step="1">
+          <div id="centralQuestion" class="central-question">
+            Your question will appear here
+          </div>
+
+          <!-- text card -->
+          <div class="node node-1">
+            <span></span>
+            <h3>Intent</h3>
+            <p>Understand scope, urgency, and research direction</p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="node-card-text">
+                AI research explores scope, urgency, and human impact. This
+                question examines whether automation creates a net gain or loss
+                of meaningful employment across global sectors and skill levels.
+              </div>
+            </div>
+          </div>
+
+          <!-- bar card -->
+          <div class="node node-2">
+            <span></span>
+            <h3>Audience</h3>
+            <p>Workers, students, and professionals across all industries</p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="node-bars">
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Manufacturing</span
+                    ><span class="nbr-val">78%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 78%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Finance &amp; Admin</span
+                    ><span class="nbr-val">65%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 65%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Healthcare</span
+                    ><span class="nbr-val">48%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 48%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Creative Arts</span
+                    ><span class="nbr-val">32%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 32%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- text card -->
+          <div class="node node-3">
+            <span></span>
+            <h3>Goal</h3>
+            <p>
+              Effective learning, adaptation, and long-term skill development
+            </p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="node-card-text">
+                Determine whether human adaptability can outpace AI-driven
+                displacement, and identify the skills, policies, and strategies
+                needed to preserve meaningful work in an AI-augmented economy.
+              </div>
+            </div>
+          </div>
+
+          <!-- text card -->
+          <div class="node node-4">
+            <span></span>
+            <h3>Context</h3>
+            <p>
+              Evolving education, labour markets, and work environments globally
+            </p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="node-card-text">
+                The 4th industrial revolution, driven by machine learning and
+                automation, is reshaping global labour markets at unprecedented
+                speed — requiring fundamental rethinking of education, policy,
+                and employment systems.
+              </div>
+            </div>
+          </div>
+
+          <!-- chart card -->
+          <div class="node node-5">
+            <span></span>
+            <h3>Implication</h3>
+            <p>
+              Reshaping careers, outcomes, and workforce performance at scale
+            </p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="nchart-label">Estimated Job Displacement (%)</div>
+              <svg
+                class="node-svg"
+                viewBox="0 0 220 58"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="ng5" x1="0" x2="0" y1="0" y2="1">
+                    <stop
+                      offset="0%"
+                      stop-color="#9b6cff"
+                      stop-opacity="0.38"
+                    />
+                    <stop offset="100%" stop-color="#9b6cff" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <polygon class="chart-area" fill="url(#ng5)" />
+                <polyline class="chart-line" />
+              </svg>
+              <div class="node-chart-btns">
+                <button class="ncb active" data-period="1Y">1Y</button>
+                <button class="ncb" data-period="3Y">3Y</button>
+                <button class="ncb" data-period="5Y">5Y</button>
+                <button class="ncb" data-period="10Y">10Y</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- bar card -->
+          <div class="node node-6">
+            <span></span>
+            <h3>Focus</h3>
+            <p>Strategies, methods, tools, and learning environment design</p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="node-bars">
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">AI Collaboration</span
+                    ><span class="nbr-val">82%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 82%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Upskilling</span
+                    ><span class="nbr-val">70%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 70%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Policy Reform</span
+                    ><span class="nbr-val">52%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 52%"></div>
+                  </div>
+                </div>
+                <div class="nbr">
+                  <div class="nbr-top">
+                    <span class="nbr-label">Well-being</span
+                    ><span class="nbr-val">38%</span>
+                  </div>
+                  <div class="nbr-track">
+                    <div class="nbr-fill" style="--pct: 38%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- chart card -->
+          <div class="node node-7">
+            <span></span>
+            <h3>Temporal</h3>
+            <p>
+              Short-term disruption evolving into long-term human adaptation
+            </p>
+            <div class="node-card">
+              <hr class="node-divider" />
+              <div class="nchart-label">AI Adoption Rate (%)</div>
+              <svg
+                class="node-svg"
+                viewBox="0 0 220 58"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient id="ng7" x1="0" x2="0" y1="0" y2="1">
+                    <stop
+                      offset="0%"
+                      stop-color="#9b6cff"
+                      stop-opacity="0.38"
+                    />
+                    <stop offset="100%" stop-color="#9b6cff" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <polygon class="chart-area" fill="url(#ng7)" />
+                <polyline class="chart-line" />
+              </svg>
+              <div class="node-chart-btns">
+                <button class="ncb active" data-period="1Y">1Y</button>
+                <button class="ncb" data-period="3Y">3Y</button>
+                <button class="ncb" data-period="5Y">5Y</button>
+                <button class="ncb" data-period="10Y">10Y</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-content" data-step="2">
+          <div class="source source-1">
+            <h3>Focused study sessions</h3>
+            <p class="source-count">source 23,119</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI optimizes learning paths efficiently, yet sustained focus and
+              intrinsic motivation remain human strengths. Workers who master
+              deep concentration will adapt where AI-driven automation falls
+              short.
+            </p>
+          </div>
+
+          <div class="source source-2">
+            <h3>Feedback and reflection</h3>
+            <p class="source-count">source 8,732</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI delivers rapid data-driven feedback, but humans uniquely
+              interpret emotional nuance and learn through genuine
+              self-reflection. This capacity for empathy keeps humans
+              competitive in AI-augmented workplaces.
+            </p>
+          </div>
+
+          <div class="source source-3">
+            <h3>Healthy study environment</h3>
+            <p class="source-count">source 5,021</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI cannot provide the physical, social, and emotional conditions
+              humans need to flourish. Creating supportive environments for
+              well-being and productivity remains a distinctly human
+              responsibility AI cannot replace.
+            </p>
+          </div>
+
+          <div class="source source-4">
+            <h3>Time management</h3>
+            <p class="source-count">source 15,677</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI automates scheduling and routine decisions, but purposeful
+              prioritization grounded in personal values remains human. Workers
+              managing time with clarity and discipline will stay indispensable
+              alongside advancing AI.
+            </p>
+          </div>
+
+          <div class="source source-5">
+            <h3>Active recall</h3>
+            <p class="source-count">source 11,348</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI retrieves any fact instantly but cannot replicate the human
+              brain's active retrieval process — the cognitive effort that
+              builds lasting memory, adaptability, and creative thinking
+              employers value most.
+            </p>
+          </div>
+
+          <div class="source source-6">
+            <h3>Economic trends</h3>
+            <p class="source-count">source 19,204</p>
+            <hr class="source-divider" />
+            <p class="source-summary">
+              AI is reshaping global economies by eliminating routine jobs while
+              generating new high-skill roles. Workers and nations that invest
+              in adaptability and lifelong learning will capture the
+              opportunities AI creates.
+            </p>
+          </div>
+
+          <ul class="process-list">
+            <li class="active">Scanning sources</li>
+            <li>Analysing relevance</li>
+            <li>Ranking insights</li>
+            <li>Building knowledge map</li>
+          </ul>
+        </div>
+
+        <div class="step-content final-layout" data-step="3">
+          <!-- Left: source categories -->
+          <div class="sources-list">
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Academic Research</p>
+                <p class="source-cat-count">23,119 sources</p>
+              </div>
+            </div>
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Institutional Guidance</p>
+                <p class="source-cat-count">15,677 sources</p>
+              </div>
+            </div>
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Education Reports</p>
+                <p class="source-cat-count">8,732 sources</p>
+              </div>
+            </div>
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Study Strategy Articles</p>
+                <p class="source-cat-count">9,876 sources</p>
+              </div>
+            </div>
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Expert Opinions</p>
+                <p class="source-cat-count">3,452 sources</p>
+              </div>
+            </div>
+            <div class="source-category">
+              <span class="source-cat-dot"></span>
+              <div class="source-cat-text">
+                <p class="source-cat-name">Cognitive Science</p>
+                <p class="source-cat-count">6,284 sources</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle: answer -->
+          <div class="answer-block">
+            <p class="tag">ANSWER GENERATED</p>
+            <h2>
+              Students can learn more effectively by using active recall,
+              managing their time well, studying with clear goals, seeking
+              feedback, and maintaining a focused learning environment.
+            </h2>
+            <p class="tag">REASONING</p>
+            <p>
+              Analysis of high-quality sources shows that while AI automates
+              certain tasks, it also creates new opportunities. Human
+              adaptability, continuous learning, and ethical policies are key to
+              maximising benefits and minimising risks.
+            </p>
+          </div>
+
+          <!-- Right: evidence panel with 3-column file cards -->
+          <div class="evidence-panel">
+            <p class="tag" style="margin-bottom: 10px;">EVIDENCE BREAKDOWN</p>
+            <div class="stats-editor">
+              <div class="stats" id="statsBar">
+                <div class="stat-item" style="--w: 40%">
+                  <strong
+                    ><span class="stat-value">40</span
+                    ><span class="stat-percent">%</span></strong
+                  >
+                  <span>official sources</span>
+                </div>
+                <div class="stat-item" style="--w: 30%">
+                  <strong
+                    ><span class="stat-value">30</span
+                    ><span class="stat-percent">%</span></strong
+                  >
+                  <span>social media</span>
+                </div>
+                <div class="stat-item" style="--w: 30%">
+                  <strong
+                    ><span class="stat-value">30</span
+                    ><span class="stat-percent">%</span></strong
+                  >
+                  <span>academic reports</span>
+                </div>
+              </div>
+              <button id="editStatsBtn" class="edit-stats-btn" type="button">
+                ✎
+              </button>
+            </div>
+
+            <p class="evidence-text">
+              In this search, I reviewed 500 websites in total, including 200
+              official government websites, 150 social media platforms, and 150
+              academic websites.
+            </p>
+
+            <div class="evidence-columns">
+              <!-- Column 1 -->
+              <div class="evidence-col">
+                <h5 class="evidence-col-header">official websites list</h5>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">The Future of Jobs Report 2023</p>
+                    <p class="file-pub">World Economic Forum</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">98%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">AI and the Future of Work</p>
+                    <p class="file-pub">McKinsey &amp; Company</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">95%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Automation and Its Impact</p>
+                    <p class="file-pub">Harvard Business Review</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">92%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">OECD Employment Outlook 2023</p>
+                    <p class="file-pub">OECD</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">89%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Global Education Monitor</p>
+                    <p class="file-pub">UNESCO</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">85%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="show-all">show all</p>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="evidence-col">
+                <h5 class="evidence-col-header">social media list</h5>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">The Future of Jobs Report 2023</p>
+                    <p class="file-pub">World Economic Forum</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">98%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">AI and the Future of Work</p>
+                    <p class="file-pub">McKinsey &amp; Company</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">95%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Automation and Its Impact</p>
+                    <p class="file-pub">Harvard Business Review</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">92%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">OECD Employment Outlook 2023</p>
+                    <p class="file-pub">OECD</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">89%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Global Education Monitor</p>
+                    <p class="file-pub">UNESCO</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">85%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="show-all">show all</p>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="evidence-col">
+                <h5 class="evidence-col-header">academic websites list</h5>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">The Future of Jobs Report 2023</p>
+                    <p class="file-pub">World Economic Forum</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">98%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">AI and the Future of Work</p>
+                    <p class="file-pub">McKinsey &amp; Company</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">95%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Automation and Its Impact</p>
+                    <p class="file-pub">Harvard Business Review</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">92%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">OECD Employment Outlook 2023</p>
+                    <p class="file-pub">OECD</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">89%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-card">
+                  <div class="file-icon"></div>
+                  <div class="file-body">
+                    <p class="file-title">Global Education Monitor</p>
+                    <p class="file-pub">UNESCO</p>
+                    <div class="file-rel">
+                      <span class="rel-text">Relevance</span>
+                      <span class="rel-dots"
+                        ><i></i><i></i><i></i><i></i><i></i><i></i
+                        ><i class="dim"></i><i class="dim"></i
+                        ><i class="dim"></i
+                      ></span>
+                      <span class="rel-num">85%</span
+                      ><span class="rel-check">✓</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="show-all">show all</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
